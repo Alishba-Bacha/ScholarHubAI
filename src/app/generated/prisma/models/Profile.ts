@@ -30,12 +30,14 @@ export type ProfileAvgAggregateOutputType = {
   cgpa: number | null
   ielts: number | null
   toefl: number | null
+  gre: number | null
 }
 
 export type ProfileSumAggregateOutputType = {
   cgpa: number | null
   ielts: number | null
   toefl: number | null
+  gre: number | null
 }
 
 export type ProfileMinAggregateOutputType = {
@@ -46,8 +48,11 @@ export type ProfileMinAggregateOutputType = {
   cgpa: number | null
   ielts: number | null
   toefl: number | null
+  gre: number | null
   degree: string | null
   university: string | null
+  preferredCountry: string | null
+  preferredField: string | null
 }
 
 export type ProfileMaxAggregateOutputType = {
@@ -58,8 +63,11 @@ export type ProfileMaxAggregateOutputType = {
   cgpa: number | null
   ielts: number | null
   toefl: number | null
+  gre: number | null
   degree: string | null
   university: string | null
+  preferredCountry: string | null
+  preferredField: string | null
 }
 
 export type ProfileCountAggregateOutputType = {
@@ -70,8 +78,11 @@ export type ProfileCountAggregateOutputType = {
   cgpa: number
   ielts: number
   toefl: number
+  gre: number
   degree: number
   university: number
+  preferredCountry: number
+  preferredField: number
   _all: number
 }
 
@@ -80,12 +91,14 @@ export type ProfileAvgAggregateInputType = {
   cgpa?: true
   ielts?: true
   toefl?: true
+  gre?: true
 }
 
 export type ProfileSumAggregateInputType = {
   cgpa?: true
   ielts?: true
   toefl?: true
+  gre?: true
 }
 
 export type ProfileMinAggregateInputType = {
@@ -96,8 +109,11 @@ export type ProfileMinAggregateInputType = {
   cgpa?: true
   ielts?: true
   toefl?: true
+  gre?: true
   degree?: true
   university?: true
+  preferredCountry?: true
+  preferredField?: true
 }
 
 export type ProfileMaxAggregateInputType = {
@@ -108,8 +124,11 @@ export type ProfileMaxAggregateInputType = {
   cgpa?: true
   ielts?: true
   toefl?: true
+  gre?: true
   degree?: true
   university?: true
+  preferredCountry?: true
+  preferredField?: true
 }
 
 export type ProfileCountAggregateInputType = {
@@ -120,8 +139,11 @@ export type ProfileCountAggregateInputType = {
   cgpa?: true
   ielts?: true
   toefl?: true
+  gre?: true
   degree?: true
   university?: true
+  preferredCountry?: true
+  preferredField?: true
   _all?: true
 }
 
@@ -219,8 +241,11 @@ export type ProfileGroupByOutputType = {
   cgpa: number | null
   ielts: number | null
   toefl: number | null
+  gre: number | null
   degree: string | null
   university: string | null
+  preferredCountry: string | null
+  preferredField: string | null
   _count: ProfileCountAggregateOutputType | null
   _avg: ProfileAvgAggregateOutputType | null
   _sum: ProfileSumAggregateOutputType | null
@@ -254,8 +279,11 @@ export type ProfileWhereInput = {
   cgpa?: Prisma.FloatNullableFilter<"Profile"> | number | null
   ielts?: Prisma.FloatNullableFilter<"Profile"> | number | null
   toefl?: Prisma.IntNullableFilter<"Profile"> | number | null
+  gre?: Prisma.IntNullableFilter<"Profile"> | number | null
   degree?: Prisma.StringNullableFilter<"Profile"> | string | null
   university?: Prisma.StringNullableFilter<"Profile"> | string | null
+  preferredCountry?: Prisma.StringNullableFilter<"Profile"> | string | null
+  preferredField?: Prisma.StringNullableFilter<"Profile"> | string | null
   user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }
 
@@ -267,8 +295,11 @@ export type ProfileOrderByWithRelationInput = {
   cgpa?: Prisma.SortOrderInput | Prisma.SortOrder
   ielts?: Prisma.SortOrderInput | Prisma.SortOrder
   toefl?: Prisma.SortOrderInput | Prisma.SortOrder
+  gre?: Prisma.SortOrderInput | Prisma.SortOrder
   degree?: Prisma.SortOrderInput | Prisma.SortOrder
   university?: Prisma.SortOrderInput | Prisma.SortOrder
+  preferredCountry?: Prisma.SortOrderInput | Prisma.SortOrder
+  preferredField?: Prisma.SortOrderInput | Prisma.SortOrder
   user?: Prisma.UserOrderByWithRelationInput
 }
 
@@ -283,8 +314,11 @@ export type ProfileWhereUniqueInput = Prisma.AtLeast<{
   cgpa?: Prisma.FloatNullableFilter<"Profile"> | number | null
   ielts?: Prisma.FloatNullableFilter<"Profile"> | number | null
   toefl?: Prisma.IntNullableFilter<"Profile"> | number | null
+  gre?: Prisma.IntNullableFilter<"Profile"> | number | null
   degree?: Prisma.StringNullableFilter<"Profile"> | string | null
   university?: Prisma.StringNullableFilter<"Profile"> | string | null
+  preferredCountry?: Prisma.StringNullableFilter<"Profile"> | string | null
+  preferredField?: Prisma.StringNullableFilter<"Profile"> | string | null
   user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>
 }, "id" | "userId">
 
@@ -296,8 +330,11 @@ export type ProfileOrderByWithAggregationInput = {
   cgpa?: Prisma.SortOrderInput | Prisma.SortOrder
   ielts?: Prisma.SortOrderInput | Prisma.SortOrder
   toefl?: Prisma.SortOrderInput | Prisma.SortOrder
+  gre?: Prisma.SortOrderInput | Prisma.SortOrder
   degree?: Prisma.SortOrderInput | Prisma.SortOrder
   university?: Prisma.SortOrderInput | Prisma.SortOrder
+  preferredCountry?: Prisma.SortOrderInput | Prisma.SortOrder
+  preferredField?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.ProfileCountOrderByAggregateInput
   _avg?: Prisma.ProfileAvgOrderByAggregateInput
   _max?: Prisma.ProfileMaxOrderByAggregateInput
@@ -316,8 +353,11 @@ export type ProfileScalarWhereWithAggregatesInput = {
   cgpa?: Prisma.FloatNullableWithAggregatesFilter<"Profile"> | number | null
   ielts?: Prisma.FloatNullableWithAggregatesFilter<"Profile"> | number | null
   toefl?: Prisma.IntNullableWithAggregatesFilter<"Profile"> | number | null
+  gre?: Prisma.IntNullableWithAggregatesFilter<"Profile"> | number | null
   degree?: Prisma.StringNullableWithAggregatesFilter<"Profile"> | string | null
   university?: Prisma.StringNullableWithAggregatesFilter<"Profile"> | string | null
+  preferredCountry?: Prisma.StringNullableWithAggregatesFilter<"Profile"> | string | null
+  preferredField?: Prisma.StringNullableWithAggregatesFilter<"Profile"> | string | null
 }
 
 export type ProfileCreateInput = {
@@ -327,8 +367,11 @@ export type ProfileCreateInput = {
   cgpa?: number | null
   ielts?: number | null
   toefl?: number | null
+  gre?: number | null
   degree?: string | null
   university?: string | null
+  preferredCountry?: string | null
+  preferredField?: string | null
   user: Prisma.UserCreateNestedOneWithoutProfileInput
 }
 
@@ -340,8 +383,11 @@ export type ProfileUncheckedCreateInput = {
   cgpa?: number | null
   ielts?: number | null
   toefl?: number | null
+  gre?: number | null
   degree?: string | null
   university?: string | null
+  preferredCountry?: string | null
+  preferredField?: string | null
 }
 
 export type ProfileUpdateInput = {
@@ -351,8 +397,11 @@ export type ProfileUpdateInput = {
   cgpa?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   ielts?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   toefl?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  gre?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   degree?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   university?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredCountry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredField?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   user?: Prisma.UserUpdateOneRequiredWithoutProfileNestedInput
 }
 
@@ -364,8 +413,11 @@ export type ProfileUncheckedUpdateInput = {
   cgpa?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   ielts?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   toefl?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  gre?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   degree?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   university?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredCountry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredField?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type ProfileCreateManyInput = {
@@ -376,8 +428,11 @@ export type ProfileCreateManyInput = {
   cgpa?: number | null
   ielts?: number | null
   toefl?: number | null
+  gre?: number | null
   degree?: string | null
   university?: string | null
+  preferredCountry?: string | null
+  preferredField?: string | null
 }
 
 export type ProfileUpdateManyMutationInput = {
@@ -387,8 +442,11 @@ export type ProfileUpdateManyMutationInput = {
   cgpa?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   ielts?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   toefl?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  gre?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   degree?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   university?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredCountry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredField?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type ProfileUncheckedUpdateManyInput = {
@@ -399,8 +457,11 @@ export type ProfileUncheckedUpdateManyInput = {
   cgpa?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   ielts?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   toefl?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  gre?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   degree?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   university?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredCountry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredField?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type ProfileNullableScalarRelationFilter = {
@@ -416,14 +477,18 @@ export type ProfileCountOrderByAggregateInput = {
   cgpa?: Prisma.SortOrder
   ielts?: Prisma.SortOrder
   toefl?: Prisma.SortOrder
+  gre?: Prisma.SortOrder
   degree?: Prisma.SortOrder
   university?: Prisma.SortOrder
+  preferredCountry?: Prisma.SortOrder
+  preferredField?: Prisma.SortOrder
 }
 
 export type ProfileAvgOrderByAggregateInput = {
   cgpa?: Prisma.SortOrder
   ielts?: Prisma.SortOrder
   toefl?: Prisma.SortOrder
+  gre?: Prisma.SortOrder
 }
 
 export type ProfileMaxOrderByAggregateInput = {
@@ -434,8 +499,11 @@ export type ProfileMaxOrderByAggregateInput = {
   cgpa?: Prisma.SortOrder
   ielts?: Prisma.SortOrder
   toefl?: Prisma.SortOrder
+  gre?: Prisma.SortOrder
   degree?: Prisma.SortOrder
   university?: Prisma.SortOrder
+  preferredCountry?: Prisma.SortOrder
+  preferredField?: Prisma.SortOrder
 }
 
 export type ProfileMinOrderByAggregateInput = {
@@ -446,14 +514,18 @@ export type ProfileMinOrderByAggregateInput = {
   cgpa?: Prisma.SortOrder
   ielts?: Prisma.SortOrder
   toefl?: Prisma.SortOrder
+  gre?: Prisma.SortOrder
   degree?: Prisma.SortOrder
   university?: Prisma.SortOrder
+  preferredCountry?: Prisma.SortOrder
+  preferredField?: Prisma.SortOrder
 }
 
 export type ProfileSumOrderByAggregateInput = {
   cgpa?: Prisma.SortOrder
   ielts?: Prisma.SortOrder
   toefl?: Prisma.SortOrder
+  gre?: Prisma.SortOrder
 }
 
 export type ProfileCreateNestedOneWithoutUserInput = {
@@ -515,8 +587,11 @@ export type ProfileCreateWithoutUserInput = {
   cgpa?: number | null
   ielts?: number | null
   toefl?: number | null
+  gre?: number | null
   degree?: string | null
   university?: string | null
+  preferredCountry?: string | null
+  preferredField?: string | null
 }
 
 export type ProfileUncheckedCreateWithoutUserInput = {
@@ -526,8 +601,11 @@ export type ProfileUncheckedCreateWithoutUserInput = {
   cgpa?: number | null
   ielts?: number | null
   toefl?: number | null
+  gre?: number | null
   degree?: string | null
   university?: string | null
+  preferredCountry?: string | null
+  preferredField?: string | null
 }
 
 export type ProfileCreateOrConnectWithoutUserInput = {
@@ -553,8 +631,11 @@ export type ProfileUpdateWithoutUserInput = {
   cgpa?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   ielts?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   toefl?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  gre?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   degree?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   university?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredCountry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredField?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type ProfileUncheckedUpdateWithoutUserInput = {
@@ -564,8 +645,11 @@ export type ProfileUncheckedUpdateWithoutUserInput = {
   cgpa?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   ielts?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   toefl?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  gre?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   degree?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   university?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredCountry?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  preferredField?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 
@@ -578,8 +662,11 @@ export type ProfileSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   cgpa?: boolean
   ielts?: boolean
   toefl?: boolean
+  gre?: boolean
   degree?: boolean
   university?: boolean
+  preferredCountry?: boolean
+  preferredField?: boolean
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["profile"]>
 
@@ -591,8 +678,11 @@ export type ProfileSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   cgpa?: boolean
   ielts?: boolean
   toefl?: boolean
+  gre?: boolean
   degree?: boolean
   university?: boolean
+  preferredCountry?: boolean
+  preferredField?: boolean
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["profile"]>
 
@@ -604,8 +694,11 @@ export type ProfileSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exten
   cgpa?: boolean
   ielts?: boolean
   toefl?: boolean
+  gre?: boolean
   degree?: boolean
   university?: boolean
+  preferredCountry?: boolean
+  preferredField?: boolean
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["profile"]>
 
@@ -617,11 +710,14 @@ export type ProfileSelectScalar = {
   cgpa?: boolean
   ielts?: boolean
   toefl?: boolean
+  gre?: boolean
   degree?: boolean
   university?: boolean
+  preferredCountry?: boolean
+  preferredField?: boolean
 }
 
-export type ProfileOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "userId" | "citizenship" | "residence" | "cgpa" | "ielts" | "toefl" | "degree" | "university", ExtArgs["result"]["profile"]>
+export type ProfileOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "userId" | "citizenship" | "residence" | "cgpa" | "ielts" | "toefl" | "gre" | "degree" | "university" | "preferredCountry" | "preferredField", ExtArgs["result"]["profile"]>
 export type ProfileInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   user?: boolean | Prisma.UserDefaultArgs<ExtArgs>
 }
@@ -645,8 +741,11 @@ export type $ProfilePayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     cgpa: number | null
     ielts: number | null
     toefl: number | null
+    gre: number | null
     degree: string | null
     university: string | null
+    preferredCountry: string | null
+    preferredField: string | null
   }, ExtArgs["result"]["profile"]>
   composites: {}
 }
@@ -1078,8 +1177,11 @@ export interface ProfileFieldRefs {
   readonly cgpa: Prisma.FieldRef<"Profile", 'Float'>
   readonly ielts: Prisma.FieldRef<"Profile", 'Float'>
   readonly toefl: Prisma.FieldRef<"Profile", 'Int'>
+  readonly gre: Prisma.FieldRef<"Profile", 'Int'>
   readonly degree: Prisma.FieldRef<"Profile", 'String'>
   readonly university: Prisma.FieldRef<"Profile", 'String'>
+  readonly preferredCountry: Prisma.FieldRef<"Profile", 'String'>
+  readonly preferredField: Prisma.FieldRef<"Profile", 'String'>
 }
     
 

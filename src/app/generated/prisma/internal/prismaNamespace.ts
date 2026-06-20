@@ -615,8 +615,11 @@ export const ProfileScalarFieldEnum = {
   cgpa: 'cgpa',
   ielts: 'ielts',
   toefl: 'toefl',
+  gre: 'gre',
   degree: 'degree',
-  university: 'university'
+  university: 'university',
+  preferredCountry: 'preferredCountry',
+  preferredField: 'preferredField'
 } as const
 
 export type ProfileScalarFieldEnum = (typeof ProfileScalarFieldEnum)[keyof typeof ProfileScalarFieldEnum]
